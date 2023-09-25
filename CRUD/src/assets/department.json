@@ -1,0 +1,21 @@
+{
+    "data": [{
+            "departmentId": 1,
+            "departmentName": "Sales"
+        },
+        {
+            "departmentId": 2,
+            "departmentName": "Marketing"
+        },
+        {
+            "departmentId": 3,
+            "departmentName": "Admin"
+        },
+        {
+            "departmentId": 4,
+            "departmentName": "RnD"
+        }
+
+
+    ]
+}

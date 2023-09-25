@@ -1,0 +1,11 @@
+{
+    "data": [{
+        "firstName": "sachin",
+        "lastName": "tendulkar",
+        "department": "sales",
+        "departmentId": "1",
+        "gender": "male",
+        "email": "sac_ted@yahoo.com",
+        "phoneNo": "9898989898"
+    }]
+}
