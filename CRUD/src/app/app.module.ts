@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DepartmentsComponent } from './pages/departments/departments.component';
 import { HttpClientModule } from '@angular/common/http';
+import { HighlightDirective } from './highlight.directive';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    DepartmentsComponent
+    DepartmentsComponent,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,
