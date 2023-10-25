@@ -19,7 +19,7 @@ export class HighlightDirective {
         this.el.nativeElement.style.color = 'green';
       } else {
         if (this.el) {
-          this.el.nativeElement.style.color = 'red';
+          // this.el.nativeElement.style.color = 'red';
         }
       }
     }
