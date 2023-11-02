@@ -1,11 +1,13 @@
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CustomService {
+
+  public cartAddedSubject = new Subject<boolean>;
 
   constructor(private http: HttpClient) { }
 

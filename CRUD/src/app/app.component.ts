@@ -39,7 +39,10 @@ export class AppComponent implements OnInit {
 
   loadDataById(id:any){
     this.customService.addCartItemById(id).subscribe(res=> {
-
+      if(res.res){
+        alert("Product added in the cart")
+        this.customService.cartAddedSubject.next(true);
+      }
     })
   }
 }
