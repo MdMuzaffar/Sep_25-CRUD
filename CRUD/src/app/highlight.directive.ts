@@ -9,8 +9,12 @@ export class HighlightDirective {
 
   @Input() number = 0;
   @Input() divisibleBy = 1;
+
+
   constructor(el: ElementRef) {
     this.el = el;
+
+   
   }
 
   onClick() {

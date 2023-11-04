@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Subject } from 'rxjs';
 import {ajax} from 'rxjs/ajax'
 import { CustomService } from './service/custom.service';
+import { animate } from '@angular/animations';
 
 @Component({
   selector: 'app-root',
@@ -12,8 +13,10 @@ export class AppComponent implements OnInit {
   title = 'CRUD';
 
   number = 50;
-
-  constructor(private customService: CustomService){}
+  constructor(private customService: CustomService){   
+      
+    }
+  
 
   ngOnInit(){
     const subject = new Subject();
@@ -45,4 +48,5 @@ export class AppComponent implements OnInit {
       }
     })
   }
+
 }
