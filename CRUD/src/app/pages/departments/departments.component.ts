@@ -39,6 +39,13 @@ export class DepartmentsComponent implements OnInit {
     this.http.get("assets/getEmployee.json").subscribe((res:any)=>{
       // debugger
     this.employeeData = res.data
+    // return Math.prop();
     })
   }
+  model: any = {};
+
+  onSubmit() {
+    console.log('Form submitted with data:', this.model);
+  }
+  
 }
