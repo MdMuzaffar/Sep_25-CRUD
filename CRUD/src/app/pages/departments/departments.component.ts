@@ -47,5 +47,18 @@ export class DepartmentsComponent implements OnInit {
   onSubmit() {
     console.log('Form submitted with data:', this.model);
   }
+  items = [
+    { id: 1, name: 'Item 1' },
+    { id: 2, name: 'Item 2' },
+    { id: 3, name: 'Item 3' },
+  ];
+  updateItems() {
+    // Simulate an update by changing the reference to the items array
+    this.items = [...this.items, { id: 4, name: 'Item 4' }];
+  }
+
+  trackByItemId(index: number, item: any) {
+    return item.id;
+  }
   
 }
