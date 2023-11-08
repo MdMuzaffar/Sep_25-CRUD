@@ -150,4 +150,7 @@
         <li *ngFor="let item of items; trackBy: trackByItemId">{{ item.name }}</li>
     </ul>
 
+    <div #container></div>
+    <button (click)="addElement()">Add Element</button>
+
 </section>

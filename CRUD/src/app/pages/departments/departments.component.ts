@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, Renderer2 } from '@angular/core';
 
 @Component({
   selector: 'app-departments',
@@ -15,7 +15,7 @@ export class DepartmentsComponent implements OnInit {
    message: string = '';
 
 
-  constructor( private http:HttpClient){}
+  constructor( private http:HttpClient, private renderer: Renderer2, private el: ElementRef){}
   // url = "C:\Users\Muzaffar Ahmed\Desktop\Projects\Angular-Afsar\CRUD_InAngular_Sep_12\CRUD_InAngular_Sep_25_2023\Sep_25-CRUD\CRUD\src\assets"
   ngOnInit(): void {
     this.loadDepartment();
@@ -26,6 +26,7 @@ export class DepartmentsComponent implements OnInit {
       this.message = 'I am still a private message';
     }, 2000);
     console.log(this.message);
+    const container = this.el.nativeElement.querySelector('#container');
   }
 
   loadDepartment(){
@@ -59,6 +60,19 @@ export class DepartmentsComponent implements OnInit {
 
   trackByItemId(index: number, item: any) {
     return item.id;
+  }
+
+  addElement() {
+    // Create a new <p> element
+    const paragraph = this.renderer.createElement('p');
+    const text = this.renderer.createText('This is a dynamically added paragraph.');
+
+    // Append the text node to the paragraph element
+    this.renderer.appendChild(paragraph, text);
+
+    // Append the paragraph element to the container
+    const container = this.el.nativeElement.querySelector('#container');
+    this.renderer.appendChild(container, paragraph);
   }
   
 }
