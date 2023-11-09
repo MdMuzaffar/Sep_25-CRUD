@@ -75,4 +75,15 @@ export class DepartmentsComponent implements OnInit {
     this.renderer.appendChild(container, paragraph);
   }
   
+   var personDetail = {
+    fullName: 'Muzaffar Ahmed',
+    nickName: 'Mujju',
+    tellTheTruth(){
+      console.log(`My Name is ${this.fullName} and I am a programmer`)
+      
+    }
+    console.log(personDetail.fullName);
+    console.log(personDetail.nickName);
+  }
+  
 }
